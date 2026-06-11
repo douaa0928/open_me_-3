@@ -78,7 +78,7 @@ export default function App() {
     if (step === 5) {
       sendEmailData();
     }
-  }, [step]);
+  }, [step, date, time, foodChoice]);
 
   // ============================================================================
   // HANDLERS
@@ -102,14 +102,14 @@ export default function App() {
 
   const sendEmailData = async () => {
     try {
+      const formData = new FormData();
+      formData.append('date', `${date.day}/${date.month}/${date.year}`);
+      formData.append('time', time);
+      formData.append('food', foodChoice);
+      
       await fetch('https://formspree.io/f/mlgkwnen', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          date: `${date.day}/${date.month}/${date.year}`,
-          time: time,
-          food: foodChoice,
-        }),
+        body: formData,
       });
     } catch (error) {
       console.error('Failed to send email:', error);
