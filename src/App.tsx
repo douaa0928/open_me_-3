@@ -73,6 +73,13 @@ export default function App() {
     }
   }, [step]);
 
+  // Send email when reaching final step
+  useEffect(() => {
+    if (step === 5) {
+      sendEmailData();
+    }
+  }, [step]);
+
   // ============================================================================
   // HANDLERS
   // ============================================================================
@@ -91,6 +98,22 @@ export default function App() {
     // Pick a random message
     const randomMsg = FOOD_MESSAGES[Math.floor(Math.random() * FOOD_MESSAGES.length)];
     setFoodMessage(randomMsg);
+  };
+
+  const sendEmailData = async () => {
+    try {
+      await fetch('https://formspree.io/f/mlgkwnen', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          date: `${date.day}/${date.month}/${date.year}`,
+          time: time,
+          food: foodChoice,
+        }),
+      });
+    } catch (error) {
+      console.error('Failed to send email:', error);
+    }
   };
 
   // ============================================================================
@@ -301,7 +324,7 @@ export default function App() {
                     type="time" 
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
-                    className="w-full p-3 rounded-xl bg-orange-300/50 text-white focus:outline-none focus:ring-2 focus:ring-white [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert"
+                    className="w-full p-3 rounded-xl bg-orange-300/50 text-white focus:outline-none focus:ring-2 focus:ring-white [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-pic[...]
                   />
                 </div>
               </div>
