@@ -342,7 +342,11 @@ export default function App() {
               What are we eating? 🍽️
             </h2>
             <p className="text-pink-500 font-medium mb-8 text-center px-4 bg-pink-50 py-2 rounded-lg">
-              "Im treating baby pick what u feel" ✨
+              "Im treating baby pick whatever you want" ✨
+            </p>
+            
+            <p className="text-pink-500 font-medium mb-8 text-center px-4 bg-pink-50 py-2 rounded-lg">
+              "dw ill be the🍰 😘😘" ✨
             </p>
 
             <div className="grid grid-cols-2 gap-4 w-full px-4 mb-8">
@@ -415,7 +419,7 @@ export default function App() {
               <h2 className="text-2xl font-bold text-gray-800 mb-4 z-10 relative">
                 I'll come get u at <span className="text-pink-500">{time}</span> <br/>
                 on <span className="text-pink-500">{date.day}/{date.month}/{date.year}</span> <br/>
-                prince(ss) 👑
+                princess👑
               </h2>
               
               <div className="mt-8 pt-6 border-t border-pink-100 text-gray-600 italic font-medium relative z-10 text-sm">
