@@ -1,20 +1,28 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Calendar, Clock, ChevronRight } from 'lucide-react';
+import walkingCatGif from './assets/gifs/walking-cat.gif';
+import cuteCatGif from './assets/gifs/cute-cat.gif';
+import sadCat1Gif from './assets/gifs/sad-cat-1.gif';
+import sadCat2Gif from './assets/gifs/sad-cat-2.gif';
+import sadCat3Gif from './assets/gifs/sad-cat-3.gif';
+import happyCatGif from './assets/gifs/happy-cat.gif';
+import heartsCatGif from './assets/gifs/hearts-cat.gif';
+import envelopeGif from './assets/gifs/envelope.gif';
 
 // ============================================================================
 // CONFIGURATION
-// You can change the image URLs below to your preferred GIFs (from Pixabay, Tenor, etc.)
+// GIFs are bundled locally so they work on GitHub Pages (external hosts block hotlinking)
 // ============================================================================
 const IMAGES = {
-  walkingCat: 'https://media.tenor.com/Qk7sH-o8EaUAAAAj/cat-walking.gif', // Cat walking animation
-  cuteCat: 'https://media.tenor.com/Z8fzJ1X1OQQAAAAj/cat-cute.gif', // Initial proposal cat
-  sadCat1: 'https://media.tenor.com/PytWAhM865UAAAAj/cat-crying.gif', // Sad cat (1st no)
-  sadCat2: 'https://media.tenor.com/1GvK0pQ5gXMAAAAj/crying-cat.gif', // Sadder cat (2nd no)
-  sadCat3: 'https://media.tenor.com/YIfP_2BpxG4AAAAj/sad-cat.gif', // Saddest cat (3rd no)
-  happyCat: 'https://media.tenor.com/b_x3O-v-3iUAAAAj/cat-happy.gif', // Happy cat (said yes)
-  heartsCat: 'https://media.tenor.com/8Qp2s5gZ42YAAAAj/cat-heart.gif', // Final scene cat playing with hearts
-  envelope: 'https://media.tenor.com/4h_Fh_3zUHgAAAAj/love-letter.gif', // Envelope popping up
+  walkingCat: walkingCatGif,
+  cuteCat: cuteCatGif,
+  sadCat1: sadCat1Gif,
+  sadCat2: sadCat2Gif,
+  sadCat3: sadCat3Gif,
+  happyCat: happyCatGif,
+  heartsCat: heartsCatGif,
+  envelope: envelopeGif,
 };
 
 // Random messages for food selection
