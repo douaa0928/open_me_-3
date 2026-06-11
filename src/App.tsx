@@ -324,7 +324,7 @@ export default function App() {
                     type="time" 
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
-                    className="w-full p-3 rounded-xl bg-orange-300/50 text-white focus:outline-none focus:ring-2 focus:ring-white [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-pic[...]
+                    className="w-full p-3 rounded-xl bg-orange-300/50 text-white focus:outline-none focus:ring-2 focus:ring-white"
                   />
                 </div>
               </div>
@@ -332,7 +332,6 @@ export default function App() {
               <div className="mt-10 flex justify-end">
                 <motion.button
                   onClick={() => {
-                    // Only proceed if filled, but for now we can just proceed
                     if (date.day && date.month && date.year && time) {
                       setStep(4);
                     } else {
