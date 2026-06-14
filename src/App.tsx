@@ -527,7 +527,7 @@ Food: ${selectedFoodName}`,
             </p>
 
             <p className="text-pink-500 font-medium mb-8 text-center px-4 bg-pink-50 py-2 rounded-lg">
-              "dw ill be the 🍰 😘😘" ✨
+              "ill choose the 🍰 " ✨
             </p>
 
             <div className="grid grid-cols-2 gap-4 w-full px-4 mb-8">
@@ -625,7 +625,7 @@ Food: ${selectedFoodName}`,
               )}
 
               <div className="mt-8 pt-6 border-t border-pink-100 text-gray-600 italic font-medium relative z-10 text-sm">
-                ps: i wouldve came to get u anyway cause your mine 😊❤️
+                ps: i wouldve came to get u anyway cause your mine  cutie 😊❤️
               </div>
             </div>
           </motion.div>
